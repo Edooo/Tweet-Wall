@@ -1,3 +1,10 @@
+
 language: csharp
-solution: Tweet-Wall.sln
-script: make build
+solution: ./Tweet-Wall/Tweet-Wall.sln
+
+install:
+  - sudo apt-get install nunit-console
+  - nuget restore ./Tweet-Wall/Tweet-Wall.sln
+
+script:
+  - xbuild ./Tweet-Wall/Tweet-Wall.sln
