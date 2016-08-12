@@ -1,4 +1,7 @@
-language: csharp
-solution: Tweet-Wall.sln
+language: c
+
 install:
-- travis_retry nuget restore -source "https://www.nuget.org/api/v2" Tweet-Wall.sln
+  - sudo apt-get install mono-devel mono-gmcs nunit-console
+script:
+  - xbuild Tweet-Wall.sln
+  - nunit-console Tweet-Wall/bin/Debug/Tweet-Wall.dll
