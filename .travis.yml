@@ -3,4 +3,4 @@ solution: Tweet-Wall.sln
 install:
 - travis_retry nuget restore -source "https://www.nuget.org/api/v2" Tweet-Wall.sln
 script:
-- xbuild Tweet-Wall.sln
+- msbuild Tweet-Wall.sln
