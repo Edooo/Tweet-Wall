@@ -1,7 +1,3 @@
 language: csharp
-
-install:
-  - sudo apt-get install mono-devel mono-gmcs nunit-console
-script:
-  - xbuild Tweet-Wall.sln
-  - nunit-console Tweet-Wall/bin/Debug/Tweet-Wall.dll
+solution: Tweet-Wall.sln
+script: make build
